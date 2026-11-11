@@ -1,7 +1,10 @@
+
 #include <stdio.h>
+#include <stdlib.h>
+#define MAX 5
 
 int stack[MAX];
-int top=-1;// shows that the stack is initially empty//
+int top=-1,i;// shows that the stack is initially empty//
 
 void push(int value)
 {
@@ -11,7 +14,7 @@ void push(int value)
     }
     else
     {
-        top++
+        top++;
         stack[top]=value;
         printf("the value pused into the stack is %d",value);
 
@@ -34,7 +37,7 @@ void pop()
 
 void peek()
 {
-    if top==-1
+    if (top==-1)
     {
         printf("Stack is empty");
     
@@ -48,14 +51,14 @@ void peek()
 
 void display()
 {
-    if top==-1
+    if (top==-1)
     {
         printf("Stack is empty");
     
     }
     else 
     {
-        for(i=top,i>=0,i--)
+        for(i=top;i>=0;i--)
         {
             printf("%d",stack[i]);
         }
@@ -112,4 +115,3 @@ int main()
 }
 return(0);
 }
-
